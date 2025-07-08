@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/68a9b0b573.js" crossorigin="anonymous"></script>
+        <title>Météo | SALIM BOUCHAKOUR</title>
+        <link rel="stylesheet" href="style.css">
+       <link rel="icon" type="image/jpeg" href="./images/weather-app-favicon.jpg">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body class="flex">
+       
+        <main ><div class="blur-box flex">
+            <div class="Title flex">
+               <div class="flex" style="flex-direction: row; gap: 20px;"> <img src="./images/globe.png" style="width: 70px; height: 70px;"><h1>Météo Dynamique</h1></div>
+                
+            </div>
+            <div class="search">
+                <form class="flex">
+                    <input  id="city" type="text" placeholder="Rechercher une ville ...">
+                    <button  id="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+            <div class="city-info flex">
+                <h2 id="city-name"> ---- </h2>
+                <p id="time">
+                    <script>new Date()</script>
+                </p>
+            </div>
+            <img src="" id="icon" style="display: none;">
+            <div class="weather-info flex">
+                <h2><span id="weather-degree"> -- </span>°C</h2>
+                <h4 id="weather-text"> ---- </h4>
+            </div>
+            <div class="more-details flex">
+                <div class="card flex">
+                    <p style="color: black;">Ressenti :</p>
+                    <p><span id="ressenti-degree"> -- </span>°C</p>
+                </div>
+                <div class="card flex">
+                    <p style="color: black;">Humidité :</p>
+                    <p><span id="humidité"> -- </span>%</p>
+                </div>
+                <div class="card flex">
+                    <p style="color: black;">Vent :</p>
+                    <p><span id="wind"> -- </span>Km/h</p>
+                </div>
+            </div></div>
+        </main>
+        <div id="loading" style="display: none;">
+            <div class="spinner"></div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
